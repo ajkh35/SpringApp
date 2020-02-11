@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a Post</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body class="text-center">
+    <h1>Add a Post</h1>
+    <form action="#" th:action="@{/add}" th:object="${post}" method="post">
+        <div class="form-group">
+            <label for="id">Id: </label>
+            <input id="id" type="text" th:field="*{id}" />
+        </div>
+        <div class="form-group">
+            <label for="userid">User Id: </label>
+            <input id="userid" type="text" th:field="*{userId}" />
+        </div>
+        <div class="form-group">
+            <label for="title">Title: </label>
+            <input id="title" type="text" th:field="*{title}" />
+        </div>
+        <div class="form-group">
+            <label for="id">Body: </label>
+            <input id="body" type="text" th:field="*{body}" />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary">Reset</button>
+    </form>
+</body>
+</html>
